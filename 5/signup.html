@@ -1,0 +1,11 @@
+<!-- signup.html -->
+<form name="signupForm" ng-submit="submitForm()">
+  <label>First Name:
+    <input type="text" ng-model="user.firstName" required>
+  </label>
+  <!-- ... Repeat for other fields (last name, email, phone, menu number) -->
+
+  <button type="submit" ng-disabled="signupForm.$invalid">Submit</button>
+</form>
+<div ng-if="invalidMenuNumber">No such menu number exists.</div>
+<div ng-if="successMessage">Your information has been saved.</div>
